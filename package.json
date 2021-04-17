@@ -1,0 +1,25 @@
+{
+    "name": "welkin",
+    "displayName": "welkin",
+    "description": "Language support for welkin HLL",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "welkin",
+            "aliases": [],
+            "extensions": [".w"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "welkin",
+            "scopeName": "source.welkin",
+            "path": "./syntaxes/welkincore.tmLanguage.json"
+        }]
+    }
+}
