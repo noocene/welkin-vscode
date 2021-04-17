@@ -63,15 +63,32 @@
             }]
         },
         "functions": {
-            "match": "(~as)\\s*([A-Za-z_]+)",
-            "captures": {
-                "1": {
-                    "name": "keyword.other"
+            "patterns": [{
+                    "match": "(~as)\\s*([A-Za-z_]+)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.other"
+                        },
+                        "2": {
+                            "name": "entity.name"
+                        }
+                    }
                 },
-                "2": {
-                    "name": "entity.name"
+                {
+                    "match": "(\\|-)([A-Za-z_]+)(->)",
+                    "captures": {
+                        "1": {
+                            "name": "keyword.other"
+                        },
+                        "2": {
+                            "name": "entity.name"
+                        },
+                        "3": {
+                            "name": "keyword.other"
+                        }
+                    }
                 }
-            }
+            ]
         },
         "lambdas": {
             "match": "([A-Za-z_]+)\\s*(\\|\\|?>)",
